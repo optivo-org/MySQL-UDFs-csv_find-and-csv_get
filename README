@@ -1,0 +1,33 @@
+MySQL UDFs csv_find and csv_get
+-------------------------------
+
+Very fast and memory efficient search on sorted CSV files from
+within mysql.
+
+Homepage: http://pero.blogs.aprilmayjune.org/?p=45&src=RM
+
+Installation
+------------
+
+Currently installation instructions are only available for Unix/Linux.
+
+1. Install limysqldev / mysql-devel
+   On Debian/Ubuntu do the following:
+   #> sudo apt-get install libmysqlclient-dev
+   On RedHat/Fedora/CentOS
+   #> sudo yum install mysql-devel
+
+2. Adjust MYSQL_PLUGIN_PATH in Makefile to match your plugin dir
+   specified in my.cnf.
+   
+3. #> sudo make install 
+
+4. Make functions available by executing the following statements:
+   mysql> SET character set utf8;
+   mysql> CREATE FUNCTION csv_find RETURNS INTEGER SONAME 'libmysql_udf_csv_binary_search.so';
+   mysql> CREATE FUNCTION csv_get RETURNS STRING SONAME 'libmysql_udf_csv_binary_search.so';
+
+For more information go to http://pero.blogs.aprilmayjune.org/?p=45&src=RM
+
+Copyright (C) 2010 and later optivo GmbH, pr-mysqludf@optivo.de
+ 
