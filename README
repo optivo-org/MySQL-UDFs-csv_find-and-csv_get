@@ -4,7 +4,7 @@ MySQL UDFs csv_find and csv_get
 Very fast and memory efficient search on sorted CSV files from
 within mysql.
 
-Homepage: http://pero.blogs.aprilmayjune.org/?p=45&src=RM
+Homepage: http://aprilmayjune.org/2010/09/05/integrating-mysql-and-hadoop-or-a-different-approach-on-using-csv-files-in-mysql/
 
 Installation
 ------------
